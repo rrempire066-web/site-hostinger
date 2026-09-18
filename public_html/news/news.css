@@ -1,0 +1,90 @@
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  a { color: inherit; text-decoration: none; }
+  body {
+    --bg: #0B0E14;
+    --surface: #141928;
+    --surface-2: #1B2233;
+    --ink: #EDEFF5;
+    --ink-soft: #8B93A7;
+    --line: #232B3D;
+    --accent: #5B8CFF;
+    --tag-tech: #5B8CFF;
+    --tag-ia: #A78BFA;
+    --tag-games: #34D399;
+    --tag-ofertas: #FBBF24;
+    font-family: 'Manrope', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .cn-header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 20px 48px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(11,14,20,0.92); backdrop-filter: blur(8px); z-index: 10; }
+  .cn-nav-links { grid-column: 1; display: flex; gap: 26px; align-items: center; justify-self: start; font-size: 14px; color: var(--ink-soft); }
+  .cn-nav-links a:hover { color: var(--ink); }
+  .cn-logo { grid-column: 2; display: flex; align-items: center; gap: 10px; justify-self: center; }
+  .cn-logo-text { display: flex; flex-direction: column; align-items: flex-start; }
+  .cn-right { grid-column: 3; justify-self: end; font-size: 12.5px; color: var(--ink-soft); }
+  .cn-hero { max-width: 1180px; margin: 0 auto; padding: 56px 48px 20px; }
+  .cn-hero-eyebrow { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px; }
+  .cn-hero-title { font-family: 'Space Grotesk', sans-serif; font-size: 40px; line-height: 1.15; font-weight: 700; margin: 0 0 34px; max-width: 780px; }
+  .cn-featured { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: stretch; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin-bottom: 56px; }
+  .cn-featured-cover { min-height: 260px; display: flex; align-items: center; justify-content: center; }
+  .cn-featured-body { padding: 36px 36px 36px 0; display: flex; flex-direction: column; justify-content: center; }
+  .cn-tag { display: inline-flex; align-items: center; gap: 6px; font-family: 'Space Grotesk', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 10px; border-radius: 3px; width: fit-content; margin-bottom: 14px; }
+  .tag-tech { background: rgba(91,140,255,0.14); color: var(--tag-tech); }
+  .tag-ia { background: rgba(167,139,250,0.14); color: var(--tag-ia); }
+  .tag-games { background: rgba(52,211,153,0.14); color: var(--tag-games); }
+  .tag-ofertas { background: rgba(251,191,36,0.14); color: var(--tag-ofertas); }
+  .cn-featured-title { font-family: 'Space Grotesk', sans-serif; font-size: 25px; font-weight: 700; line-height: 1.3; margin: 0 0 12px; }
+  .cn-excerpt { font-size: 14.5px; line-height: 1.7; color: var(--ink-soft); margin: 0 0 18px; max-width: 480px; }
+  .cn-meta { font-size: 12.5px; color: var(--ink-soft); }
+  .cn-read { color: var(--accent); font-weight: 600; font-size: 13.5px; margin-top: 16px; display: inline-block; }
+  .cn-read:hover { opacity: 0.8; }
+
+  .cn-section { max-width: 1180px; margin: 0 auto; padding: 0 48px 88px; }
+  .cn-section-title { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; margin: 0 0 24px; color: var(--ink-soft); text-transform: uppercase; font-size: 12px; letter-spacing: 0.14em; }
+  .cn-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
+  .cn-card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 22px; display: flex; flex-direction: column; transition: border-color .15s ease, transform .15s ease; }
+  .cn-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .cn-card-title { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; line-height: 1.35; margin: 0 0 10px; }
+  .cn-card-excerpt { font-size: 13px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 14px; flex-grow: 1; }
+
+  .cn-footer { border-top: 1px solid var(--line); padding: 44px 48px; text-align: center; }
+  .cn-footer-logo { display: inline-flex; align-items: center; gap: 8px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 10px; }
+  .cn-footer-text { font-size: 12.5px; color: var(--ink-soft); margin: 0 0 4px; }
+  .cn-footer-text a { color: var(--accent); }
+
+  @media (max-width: 860px) {
+    .cn-header { padding: 16px 20px; }
+    .cn-nav-links { display: none; }
+    .cn-right { display: none; }
+    .cn-hero { padding: 36px 20px 10px; }
+    .cn-hero-title { font-size: 28px; }
+    .cn-featured { grid-template-columns: 1fr; margin-bottom: 36px; }
+    .cn-featured-body { padding: 0 24px 28px; }
+    .cn-featured-cover { min-height: 160px; }
+    .cn-section { padding: 0 20px 60px; }
+    .cn-grid { grid-template-columns: 1fr; }
+  }
+
+/* ---- página de post ---- */
+.cn-post-wrap { max-width: 760px; margin: 0 auto; padding: 56px 48px 88px; }
+.cn-post-header { margin-bottom: 30px; }
+.cn-post-title { font-family: 'Space Grotesk', sans-serif; font-size: 33px; font-weight: 700; line-height: 1.28; margin: 16px 0 14px; }
+.cn-post-meta { font-size: 13px; color: var(--ink-soft); }
+.cn-post-cover { border-radius: 8px; overflow: hidden; margin-bottom: 34px; min-height: 220px; display: flex; align-items: center; justify-content: center; }
+.cn-post-body { font-size: 16px; line-height: 1.8; color: #D7DBE6; }
+.cn-post-body p { margin: 0 0 20px; }
+.cn-post-body h2 { font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 700; color: var(--ink); margin: 36px 0 16px; }
+.cn-post-body ul { margin: 0 0 20px; padding-left: 20px; }
+.cn-post-body li { margin-bottom: 8px; }
+.cn-post-callout { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 4px; padding: 18px 22px; font-size: 14.5px; color: var(--ink-soft); margin: 28px 0; }
+.cn-sources { margin-top: 46px; padding-top: 24px; border-top: 1px solid var(--line); }
+.cn-sources p { font-size: 12px; color: var(--ink-soft); margin: 0 0 8px; }
+.cn-sources a { color: var(--accent); }
+.cn-back { display: inline-block; margin-top: 40px; font-size: 13px; color: var(--ink-soft); text-decoration: underline; }
+.cn-disclaimer { font-size: 12px; color: var(--ink-soft); font-style: italic; }
+
+@media (max-width: 860px) {
+  .cn-post-wrap { padding: 32px 20px 60px; }
+  .cn-post-title { font-size: 25px; }
+}
